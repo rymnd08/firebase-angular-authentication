@@ -10,6 +10,8 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 })
 export class LoginFormComponent implements OnInit {
   LoginForm! : FormGroup
+  hasError = false
+  errorMsg?: string
   constructor(private fb : FormBuilder, private firebase : FirebaseService, private router: Router){}
   ngOnInit(): void {
     this.LoginForm = this.fb.group({
@@ -23,7 +25,8 @@ export class LoginFormComponent implements OnInit {
       this.router.navigate(['/'])
     })
     .catch(err =>{
-      console.log(err)
+      this.hasError = true
+      this.errorMsg = err.message.replace('Firebase: ', '')
     })
 
   }
