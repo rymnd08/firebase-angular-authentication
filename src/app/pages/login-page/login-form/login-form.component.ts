@@ -22,11 +22,22 @@ export class LoginFormComponent implements OnInit {
   submit(){
     this.firebase.loginUser(this.LoginForm.get('email')?.value, this.LoginForm.get('password')?.value)
     .then(res =>{
+      const user = res.user
+      const userInfo = {
+        email: user.email,
+        displayName : user.displayName,
+        uid: user.uid,
+        photoURL : user.photoURL,
+        refreshToken: user.refreshToken,
+        phoneNumber : user.phoneNumber
+      }
+      window.sessionStorage.setItem('userInfo', JSON.stringify(userInfo))
       this.router.navigate(['/'])
     })
     .catch(err =>{
       this.hasError = true
       this.errorMsg = err.message.replace('Firebase: ', '')
+
     })
 
   }
