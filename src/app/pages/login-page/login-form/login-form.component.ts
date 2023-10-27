@@ -12,6 +12,7 @@ export class LoginFormComponent implements OnInit {
   LoginForm! : FormGroup
   hasError = false
   errorMsg?: string
+  
   constructor(private fb : FormBuilder, private firebase : FirebaseService, private router: Router){}
   ngOnInit(): void {
     this.LoginForm = this.fb.group({

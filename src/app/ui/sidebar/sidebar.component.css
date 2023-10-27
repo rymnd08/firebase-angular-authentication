@@ -1,0 +1,10 @@
+main {
+
+    height: 100%; /* Set the sidebar's height to 100% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    min-height: 100vh;
+}
+.container-fluid{
+    padding:0;
+    margin: 0;
+}

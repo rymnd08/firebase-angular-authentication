@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import { initializeApp } from "firebase/app";
-import { firebaseConfig } from '../environments/environment';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut  } from "firebase/auth";
+import { firebaseConfig } from '../../assets/environments/environment';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged  } from "firebase/auth";
+import { Router } from '@angular/router';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +13,8 @@ export class FirebaseService {
   app = initializeApp(firebaseConfig)
   auth = getAuth()
 
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   createUser(email: string, password: string){
    return createUserWithEmailAndPassword(this.auth, email, password)
@@ -41,5 +45,16 @@ export class FirebaseService {
     //   // An error happened.
     // });
   }
+
+  onAuthStateChange(){
+    onAuthStateChanged(this.auth, (user)=>{
+      if(user){
+        const uid = user.uid
+      }else{
+        this.router.navigate(['/login'])
+      }
+    })
+  }
+
 
 }
