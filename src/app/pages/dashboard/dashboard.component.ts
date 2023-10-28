@@ -8,9 +8,15 @@ import { Component, OnInit } from "@angular/core";
 })
 export class DashboardComponent implements OnInit {
 
+  isOpen = false
 
   ngOnInit(): void {
     
+  }
+
+  toggleModal(){
+    this.isOpen = !this.isOpen
+    console.log(this.isOpen)
   }
 
 

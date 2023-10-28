@@ -2,6 +2,14 @@
 <app-sidebar>
     <div class="container">
         <h1>Manage Tasks</h1>
-        
+        <button class="btn btn-primary" [class.btn-dark]="isOpen" (click)="toggleModal()">{{!isOpen ? 'Add ' : 'Close '}}</button>
     </div>
+
+    <div class="m-4" *ngIf="isOpen">
+        <div class="input-group rounded">
+            <button class="btn btn-dark ">Add</button>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+
 </app-sidebar>
