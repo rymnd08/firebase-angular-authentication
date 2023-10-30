@@ -10,8 +10,8 @@ import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginFormComponent } from './pages/login-page/login-form/login-form.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { EmailInputComponent } from './components/email-input/email-input.component';
 import { SidebarComponent } from './ui/sidebar/sidebar.component';
+import { ModalComponent } from './ngBootstrap/modal/modal.component';
 
 
 @NgModule({
@@ -22,7 +22,6 @@ import { SidebarComponent } from './ui/sidebar/sidebar.component';
     DashboardComponent,
     LoginFormComponent,
     PageNotFoundComponent,
-    EmailInputComponent,
     SidebarComponent,
   ],
   imports: [
@@ -30,6 +29,7 @@ import { SidebarComponent } from './ui/sidebar/sidebar.component';
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
+    ModalComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
