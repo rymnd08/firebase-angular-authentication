@@ -1,45 +1,101 @@
 <app-sidebar>
-  <div class="container">
-    <h1>Manage Tasks</h1>
-
-    <app-modal [btn]="['btn btn-primary ', '', 'Add']">
-      <div id="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Email address</label
-            >
-            <input
-              [type]="isCheck ? 'text' : 'password' "
-              class="form-control"
-              id="exampleFormControlInput1"
-              placeholder="Enter password.."
-            />
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"  (change)="showPass()">
-            <label class="form-check-label" for="flexCheckChecked">
-              Show password
-            </label>
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label"
-              >Example textarea</label
-            >
-            <textarea
-              class="form-control"
-              id="exampleFormControlTextarea1"
-              rows="3"
-            ></textarea>
-          </div>
-          <hr>
-        <div class="d-flex justify-content-end gap-1">
-          <button class="btn btn-dark">Submit</button>
-          <button type="button" class="btn btn-secondary" (click)="showPass()">Close</button>
+    <div class="border shadow d-flex justify-content-between align-items-center mb-5" style="height: 40vh; overflow-y: hidden;">
+        <div class="px-4" style="text-align: justify;">
+            <h1 class="text-dark">TASKS</h1>
+            <p style="line-height: 2rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cumque ipsam iste sint, recusandae quibusdam quia sit numquam suscipit delectus aliquam in harum, cum neque. Ducimus, dignissimos, quo sequi quae accusantium eos nisi beatae perspiciatis doloremque rem, corporis amet! Dolorum explicabo saepe laudantium itaque nostrum? Reiciendis, commodi. !</p>
         </div>
-        </form>
-      </div>
-      <span id="icon"><i class="bi bi-plus"></i></span>
-    </app-modal>
-  </div>
+       <img src="https://media0.giphy.com/media/zbzuZgxt23h8ywu7Bm/giphy.gif" alt="Animated Robot" height="350">
+    </div>
+    <div class="container d-flex justify-content-between flex-wrap gap-4">
+        <app-card>
+            <img
+            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
+            alt="avatar" style="height: 60%;" class="border " id="img"/>
+            <div id="content" >
+                <blockquote class="px-2 pt-2 " >
+                    <h5>Title</h5>
+                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
+                </blockquote>
+            </div>
+        </app-card>
+        <app-card>
+            <img
+            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
+            alt="avatar" style="height: 60%;" class="border " id="img"/>
+            <div id="content" >
+                <blockquote class="px-2 pt-2 " >
+                    <h5>Title</h5>
+                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
+                </blockquote>
+            </div>
+        </app-card>
+        <app-card>
+            <img
+            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
+            alt="avatar" style="height: 60%;" class="border " id="img"/>
+            <div id="content" >
+                <blockquote class="px-2 pt-2 " >
+                    <h5>Title</h5>
+                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
+                </blockquote>
+            </div>
+        </app-card>
+        <app-card>
+            <img
+            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
+            alt="avatar" style="height: 60%;" class="border " id="img"/>
+            <div id="content" >
+                <blockquote class="px-2 pt-2 " >
+                    <h5>Title</h5>
+                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
+                </blockquote>
+            </div>
+        </app-card>
+        <app-card>
+            <img
+            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
+            alt="avatar" style="height: 60%;" class="border " id="img"/>
+            <div id="content" >
+                <blockquote class="px-2 pt-2 " >
+                    <h5>Title</h5>
+                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
+                </blockquote>
+            </div>
+        </app-card>
+        <app-card>
+            <img
+            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
+            alt="avatar" style="height: 60%;" class="border " id="img"/>
+            <div id="content" >
+                <blockquote class="px-2 pt-2 " >
+                    <h5>Title</h5>
+                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
+                </blockquote>
+            </div>
+        </app-card>
+        <app-card>
+            <img
+            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
+            alt="avatar" style="height: 60%;" class="border " id="img"/>
+            <div id="content" >
+                <blockquote class="px-2 pt-2 " >
+                    <h5>Title</h5>
+                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
+                </blockquote>
+            </div>
+        </app-card>
+        <app-card>
+            <img
+            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
+            alt="avatar" style="height: 60%;" class="border " id="img"/>
+            <div id="content" >
+                <blockquote class="px-2 pt-2 " >
+                    <h5>Title</h5>
+                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
+                </blockquote>
+            </div>
+        </app-card>
+
+
+    </div>
 </app-sidebar>

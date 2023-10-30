@@ -12,6 +12,9 @@ import { LoginFormComponent } from './pages/login-page/login-form/login-form.com
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { SidebarComponent } from './ui/sidebar/sidebar.component';
 import { ModalComponent } from './ngBootstrap/modal/modal.component';
+import { TaskComponent } from './pages/task/task.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
+import { CardComponent } from './components/card/card.component';
 
 
 @NgModule({
@@ -23,6 +26,9 @@ import { ModalComponent } from './ngBootstrap/modal/modal.component';
     LoginFormComponent,
     PageNotFoundComponent,
     SidebarComponent,
+    TaskComponent,
+    CategoriesComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

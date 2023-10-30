@@ -33,7 +33,7 @@ export class LoginFormComponent implements OnInit {
         phoneNumber : user.phoneNumber
       }
       window.sessionStorage.setItem('userInfo', JSON.stringify(userInfo))
-      this.router.navigate(['/'])
+      this.router.navigate(['/dashboard'])
     })
     .catch(err =>{
       this.hasError = true

@@ -1,62 +1,83 @@
-
 <main class="d-flex flex-nowrap">
-    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-        <span class="fs-4">Sidebar</span>
-      </a>
-      <hr>
-      <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">
-          <a href="#" class="nav-link active" aria-current="page">
-            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
-            Dashboard
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link text-white">
-            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-            Task
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link text-white">
-            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-            asdf
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link text-white">
-            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-            Products
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link text-white">
-            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-            Account
-          </a>
-        </li>
-        <hr>
-        <li>
-          <a routerLink="/" class="nav-link text-white" (click)="logout($event)">
-            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-            Logout
-          </a>
-        </li>
-      </ul>
-      <hr>
-      <div class="">
-        <a href="#" class="d-flex align-items-center text-white text-decoration-none "  aria-expanded="false">
-          <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-          <strong>{{userEmail}}</strong>
+  <div
+    class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark "
+    style="width: 250px; height: 100vh; position: fixed;"
+
+  >
+    <a
+      href="/"
+      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+    >
+      <svg class="bi pe-none " width="40" height="32">
+        <use xlink:href="#bootstrap" />
+      </svg>
+      <span class="fs-4">{{userName}}</span>
+    </a>
+    <hr />
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item"  >
+        <a
+          routerLink="/dashboard"
+          routerLinkActive="active"
+          class="nav-link text-white d-flex justify-content-between mx-4"
+        >
+          Dashboard
+          <i class="bi bi-border-all"></i>
         </a>
-      </div>
+      </li>
+      <li>
+        <a
+          routerLink="/task"
+          routerLinkActive="active"
+          class="nav-link text-white d-flex justify-content-between mx-4"
+        >
+          Task
+          <i class="bi bi-list-task"></i>
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/categories"
+          routerLinkActive="active"
+          class="nav-link text-white d-flex justify-content-between mx-4"
+        >
+          Categories
+          <i class="bi bi-tags-fill"></i>
+        </a>
+      </li>
+
+      <hr />
+      <li>
+        <a
+          routerLink="/"
+          class="nav-link text-white d-flex justify-content-between mx-4"
+          (click)="logout($event)"
+        >
+          Logout
+          <i class="bi bi-box-arrow-left"></i>
+        </a>
+      </li>
+    </ul>
+    <hr />
+    <div class="">
+      <a
+        href="#"
+        class="d-flex align-items-center text-white text-decoration-none"
+        aria-expanded="false"
+      >
+        <img
+          src="https://github.com/mdo.png"
+          alt=""
+          width="32"
+          height="32"
+          class="rounded-circle me-2"
+        />
+        <strong>{{ userEmail }}</strong>
+      </a>
     </div>
-
-
-
-    <div class="container-fluid">
-      <ng-content></ng-content>
-    </div>
+  </div>
+  <div style="margin-left: 250px; width: 100%;">
+    <ng-content></ng-content>
+  </div>
 </main>
+
