@@ -7,95 +7,22 @@
        <img src="https://media0.giphy.com/media/zbzuZgxt23h8ywu7Bm/giphy.gif" alt="Animated Robot" height="350">
     </div>
     <div class="container d-flex justify-content-between flex-wrap gap-4">
-        <app-card>
-            <img
-            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
-            alt="avatar" style="height: 60%;" class="border " id="img"/>
-            <div id="content" >
-                <blockquote class="px-2 pt-2 " >
-                    <h5>Title</h5>
-                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
-                </blockquote>
-            </div>
-        </app-card>
-        <app-card>
-            <img
-            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
-            alt="avatar" style="height: 60%;" class="border " id="img"/>
-            <div id="content" >
-                <blockquote class="px-2 pt-2 " >
-                    <h5>Title</h5>
-                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
-                </blockquote>
-            </div>
-        </app-card>
-        <app-card>
-            <img
-            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
-            alt="avatar" style="height: 60%;" class="border " id="img"/>
-            <div id="content" >
-                <blockquote class="px-2 pt-2 " >
-                    <h5>Title</h5>
-                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
-                </blockquote>
-            </div>
-        </app-card>
-        <app-card>
-            <img
-            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
-            alt="avatar" style="height: 60%;" class="border " id="img"/>
-            <div id="content" >
-                <blockquote class="px-2 pt-2 " >
-                    <h5>Title</h5>
-                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
-                </blockquote>
-            </div>
-        </app-card>
-        <app-card>
-            <img
-            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
-            alt="avatar" style="height: 60%;" class="border " id="img"/>
-            <div id="content" >
-                <blockquote class="px-2 pt-2 " >
-                    <h5>Title</h5>
-                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
-                </blockquote>
-            </div>
-        </app-card>
-        <app-card>
-            <img
-            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
-            alt="avatar" style="height: 60%;" class="border " id="img"/>
-            <div id="content" >
-                <blockquote class="px-2 pt-2 " >
-                    <h5>Title</h5>
-                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
-                </blockquote>
-            </div>
-        </app-card>
-        <app-card>
-            <img
-            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
-            alt="avatar" style="height: 60%;" class="border " id="img"/>
-            <div id="content" >
-                <blockquote class="px-2 pt-2 " >
-                    <h5>Title</h5>
-                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
-                </blockquote>
-            </div>
-        </app-card>
-        <app-card>
-            <img
-            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
-            alt="avatar" style="height: 60%;" class="border " id="img"/>
-            <div id="content" >
-                <blockquote class="px-2 pt-2 " >
-                    <h5>Title</h5>
-                    <p class="text-overflow-ellipsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, tenetur.</p>
-                </blockquote>
-            </div>
-        </app-card>
 
+       <ng-container *ngFor="let card of todos">
+        <app-card>
+            <img
+            src="https://api.dicebear.com/7.x/adventurer/svg?seed=Boots"
+            alt="avatar" style="height: 60%;" class="border " id="img"/>
+            <div id="content" >
+                <blockquote class="px-2 pt-2 " >
+                    <h5>Competed: {{card.completed}}</h5>
+                    <div class="text-overflow-ellipsis" style="width: 100%;">
+                      {{card.title}}
+                    </div>
+                </blockquote>
+            </div>
+        </app-card>
+       </ng-container>
 
     </div>
 </app-sidebar>

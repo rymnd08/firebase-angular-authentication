@@ -1,3 +1,4 @@
+import { HttpClient } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -7,21 +8,22 @@ import { Component, OnInit } from "@angular/core";
 })
 export class DashboardComponent implements OnInit {
 
-  isOpen = false
-  isShowPass = true
-  isCheck = false
+  cards = [1,2,3,4,5,6,7,8,9,10]
+  todos: any
+  constructor(private http: HttpClient){}
+
   ngOnInit(): void {
-    
+    this.http.get('https://jsonplaceholder.typicode.com/todos')
+    .subscribe({
+      next: (res) =>{
+        console.log(res)
+        this.todos = res
+      },
+      error: (err) => console.log(err)
+    })
   }
 
-  // toggleModal(){
-  //   this.isOpen = !this.isOpen
-  //   console.log(this.isOpen)
-  // }
 
-  showPass(){
-    this.isCheck = !this.isCheck
-  }
 
 
 }
